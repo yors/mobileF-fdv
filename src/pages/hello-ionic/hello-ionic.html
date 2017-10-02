@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+  <ion-row>
+  <ion-col>
+      <button ion-button menuToggle>
+       <ion-title><ion-icon style="font-size: 40px" name="information-circle"></ion-icon></ion-title>
+      </button>
+    </ion-col>
+    <ion-col>
+       <img text-center height="43"  src="assets/img/ffdv1.jpg"/>
+    </ion-col>
+    <ion-col item-end >
+       <button  *ngIf="showUser=='false'" ion-button color="royal" (click)="openFormLogin()" round icon-start>
+      <ion-icon name='log-in' is-active="false"></ion-icon>
+      Se connecter
+    </button>
+    <ion-icon *ngIf="showUser=='true'" color="royal" (click)="openModalListUser()" name="contact" style="font-size: 40px"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <img src="assets/img/ffdv.jpg"/>
+
+    <ion-card-content>
+      <ion-card-title text-center>
+        <div class="section-title">L'EGLISE</div>
+        <div class="section-border"></div>
+      </ion-card-title>
+      <p [innerHTML]="descriptionEglise"></p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+      Albums
+      <ion-badge item-end>9</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='logo-twitter' item-start style="color: #55acee"></ion-icon>
+      Followers
+      <ion-badge item-end>260k</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>
+

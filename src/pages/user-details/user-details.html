@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Informations</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/avatar.jpg" alt="your image">
+        </ion-avatar>
+        <h2>{{selectedItem.name}}</h2>
+      </ion-item>
+        Nom:
+        <ion-note item-end>
+          {{selectedItem.name}}
+        </ion-note>
+      
+  </ion-list>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-menu [content]="content" >
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Pages</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-tabs class="tabs-ico test" >
+    <ion-tab color="dark" tabIcon="home" tabTitle="Acceuil" [root]="rootPage"></ion-tab>
+     <ion-tab tabIcon="videocam" tabTitle="Vidéos" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="book" tabTitle="Livres" [root]="rootPage"></ion-tab>
+       <ion-tab tabIcon="information-circle" tabTitle="Événements" [root]="rootPage"></ion-tab>
+    <ion-tab tabIcon="settings" tabTitle="Paramètres" [root]="rootPage"></ion-tab>
+  </ion-tabs>
+
